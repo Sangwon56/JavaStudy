@@ -73,6 +73,7 @@ public class exam01Test {
         //then
         assertThat(-1).isEqualTo(math.compareTest01(2, 3));
         assertThat(1).isEqualTo(math.compareTest01(11, 11));
+        assertThat(-1).isEqualTo(math.compareTest01(7, 99));
         assertThatThrownBy(() -> math.compareTest01(-1, 10))
                 .isInstanceOf(Exception.class);
         assertThatThrownBy(() -> math.compareTest01(10, 10001))
