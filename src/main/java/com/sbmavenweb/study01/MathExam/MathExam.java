@@ -33,5 +33,13 @@ public class MathExam {
         return n1 / n2;
     }
 
-
+    public int compareTest01(int n1, int n2) throws Exception {
+        if (n1 <= 0 || n1 >= 10000) {
+            throw new Exception("num1의 값은 0과 10000의 사잇값이어야 합니다.");
+        }
+        if (n2 <= 0 || n2 >= 10000) {
+            throw new Exception("num1의 값은 0과 10000의 사잇값이어야 합니다.");
+        }
+        return (n1 == n2 ? 1 : -1);
+    }
 }

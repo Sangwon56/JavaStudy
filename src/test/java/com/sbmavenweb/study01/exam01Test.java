@@ -65,5 +65,17 @@ public class exam01Test {
                 .isInstanceOf(Exception.class);
     }
 
-
+    @Test
+    public void compare01() throws Exception {
+        //given
+        MathExam math = new MathExam();
+        //when
+        //then
+        assertThat(-1).isEqualTo(math.compareTest01(2, 3));
+        assertThat(1).isEqualTo(math.compareTest01(11, 11));
+        assertThatThrownBy(() -> math.compareTest01(-1, 10))
+                .isInstanceOf(Exception.class);
+        assertThatThrownBy(() -> math.compareTest01(10, 10001))
+                .isInstanceOf(Exception.class);
+    }
 }
