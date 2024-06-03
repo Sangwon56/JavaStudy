@@ -102,5 +102,17 @@ public class MathExam {
         return sum;
     }
 
+    public int[] exam120813(int n) throws Exception {
+        if ( n <= 0 || n >= 101) {
+            throw new Exception("n은 1~100 사이여야 합니다.");
+        }
+        int length = ( n + 1 ) / 2;
+        int[] result = new int[length];
+        int index = 0;
+        for (int i = 1; i <= n; i += 2){
+            result[index++] = i;
+        }
+        return result;
+    }
 
 }

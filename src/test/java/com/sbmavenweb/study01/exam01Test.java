@@ -136,4 +136,18 @@ public class exam01Test {
         System.out.println(exception.toString());
 
     }
+
+    @Test
+    public void exam120813() throws Exception {
+        MathExam math = new MathExam();
+
+
+        assertThat(math.exam120813(10)).isEqualTo(new int[] {1, 3, 5, 7, 9});
+        assertThat(math.exam120813(15)).isEqualTo(new int[] {1, 3, 5, 7, 9, 11, 13, 15});
+
+        Throwable exception = assertThrows(Exception.class, () -> math.exam120813(0));
+        System.out.println(exception.toString());
+        exception = assertThrows(Exception.class, () -> math.exam120813(101));
+        System.out.println(exception.toString());
+    }
 }
