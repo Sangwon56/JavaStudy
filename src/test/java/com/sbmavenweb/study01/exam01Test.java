@@ -97,4 +97,19 @@ public class exam01Test {
 //                .isInstanceOf(Exception.class);
        exception = assertThrows(Exception.class, () -> math.exam120817(new int[] {}));
        System.out.println(exception.toString());
-    }}
+    }
+
+    @Test
+    public void exam120820() throws Exception{
+        MathExam math = new MathExam();
+
+        assertThat(math.exam120820(41)).isEqualTo(1983);
+        assertThat(math.exam120820(24)).isEqualTo(2000);
+
+        Throwable exception = assertThrows(Exception.class, () -> math.exam120820(0));
+        System.out.println(exception.toString());
+        Throwable exception2 = assertThrows(Exception.class, () -> math.exam120820(121));
+        System.out.println(exception2.toString());
+
+    }
+}

@@ -61,4 +61,12 @@ public class MathExam {
         }
         return avg;
     }
+
+    public int exam120820(int age) throws Exception{
+        int year = 2024;
+        if ( age <= 0 || age > 120) {
+            throw new Exception("age 는 1과 120 사이여야 합니다.");
+        }
+        return year - age;
+    }
 }
