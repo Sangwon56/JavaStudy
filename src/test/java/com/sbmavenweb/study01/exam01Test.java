@@ -79,4 +79,22 @@ public class exam01Test {
         assertThatThrownBy(() -> math.compareTest01(10, 10001))
                 .isInstanceOf(Exception.class);
     }
-}
+
+    @Test
+    public void exam120817() throws Exception
+    {
+        MathExam math = new MathExam();
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        assertThat(5.5).isEqualTo(math.exam120817(numbers));
+        assertThat(94.0).isEqualTo(math.exam120817(new int[] {89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99}));
+//        assertThatThrownBy(() -> math.exam120817(new int[] {0, 1000, 2000}))
+//                .isInstanceOf(Exception.class);
+        Throwable exception = assertThrows(Exception.class, () -> {
+            math.exam120817(new int[] {0, 1000, 2000});
+        });
+        System.out.println(exception.toString());
+//        assertThatThrownBy(() -> math.exam120817(new int[] {}))
+//                .isInstanceOf(Exception.class);
+       exception = assertThrows(Exception.class, () -> math.exam120817(new int[] {}));
+       System.out.println(exception.toString());
+    }}
