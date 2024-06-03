@@ -124,4 +124,16 @@ public class exam01Test {
         Throwable exception = assertThrows(Exception.class, () -> math.exam120829(0));
         System.out.println(exception.toString());
     }
+
+    @Test
+    public void exam120831() throws Exception {
+        MathExam math = new MathExam();
+
+        assertThat(math.exam120831(10)).isEqualTo(30);
+        assertThat(math.exam120831(4)).isEqualTo(6);
+
+        Throwable exception = assertThrows(Exception.class, () -> math.exam120831(0));
+        System.out.println(exception.toString());
+
+    }
 }
