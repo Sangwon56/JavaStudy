@@ -119,7 +119,7 @@ public class exam01Test {
 
         assertThat(math.exam120829(70)).isEqualTo(1);
         assertThat(math.exam120829(91)).isEqualTo(3);
-        assertThat(math.exam120829(140)).isEqualTo(4);
+        assertThat(math.exam120829(180)).isEqualTo(4);
 
         Throwable exception = assertThrows(Exception.class, () -> math.exam120829(0));
         System.out.println(exception.toString());

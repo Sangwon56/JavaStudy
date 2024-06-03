@@ -76,16 +76,16 @@ public class MathExam {
         if ( angle <= 0 || angle > 180) {
             throw new Exception("angle 은 0보다 크고 180보다 작거나 같아야 합니다.");
         }
-        else if ( 0 < angle && angle < 90) {
+        else if ( angle < 90) {
             result = 1;
         }
         else if ( angle == 90 ) {
             result = 2;
         }
-        else if ( 90 < angle && angle < 180) {
+        else if ( angle < 180) {
             result = 3;
         }
-        else if ( angle == 180){
+        else if ( angle == 180 ){
             result = 4;
         }
         return result;
