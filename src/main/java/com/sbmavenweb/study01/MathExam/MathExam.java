@@ -96,11 +96,11 @@ public class MathExam {
         if ( n <= 0 || n > 1000) {
             throw new Exception("n 은 0보다 크고 1000보다 작거나 같아야 합니다.");
         }
-        for (int i = 0; i <= n; i++){
-            if( i % 2 == 0) {
+        for (int i = 0; i <= n; i+=2 ){
                 sum += i;
-            }
         }
         return sum;
     }
+
+
 }
