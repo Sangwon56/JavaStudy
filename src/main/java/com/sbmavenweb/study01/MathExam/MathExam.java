@@ -136,7 +136,13 @@ public class MathExam {
         if (hp < 0 || hp > 1000) {
             throw new Exception("hp 는 0과 1000사이여야 합니다.");
         }
-        
-        return 0;
+        int general = hp / 5;
+        hp %= 5;
+
+        int battle = hp / 3;
+        hp %= 3;
+
+        int total = general + battle + hp;
+        return total;
     }
 }
