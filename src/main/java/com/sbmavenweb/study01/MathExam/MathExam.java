@@ -198,4 +198,30 @@ public class MathExam {
         int result[] = new int[] {even_count, odd_count};
         return result;
     }
+
+    public int[] exam120899(int[] array) throws Exception {
+        int tmp = 0;
+        int tmp_num =0;
+        if (array == null) {
+            throw new Exception("array 는 null 이 아니어야 합니다.");
+        }
+        if (array.length <= 0 || array.length > 100) {
+            throw new Exception("array 배열의 길이는 1과 100 사이여야 합니다");
+        }
+        for( int i = 1; i < array.length; i++) {
+            if (array[i] < 0 || array[i] > 1000) {
+                throw new Exception("array 의 범위는 0~1000 사이여야 합니다.");
+            }
+            if( array[i - 1] > array[i]) {
+                tmp = array[i - 1];
+                tmp_num = i - 1;
+            }
+            else {
+                tmp = array[i];
+                tmp_num = i;
+            }
+        }
+        int result[] = new int[] {tmp, tmp_num};
+        return result;
+    }
 }
