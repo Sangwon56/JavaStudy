@@ -150,4 +150,18 @@ public class exam01Test {
         exception = assertThrows(Exception.class, () -> math.exam120813(101));
         System.out.println(exception.toString());
     }
+
+    @Test
+    public void exam120818() throws Exception {
+        MathExam math = new MathExam();
+
+        assertThat(math.exam120818(150000)).isEqualTo(142500);
+        assertThat(math.exam120818(580000)).isEqualTo(464000);
+
+        Throwable exception = assertThrows(Exception.class, () -> math.exam120818(9));
+        System.out.println(exception.toString());
+        exception = assertThrows(Exception.class, () -> math.exam120818(1000001));
+        System.out.println(exception.toString());
+
+    }
 }

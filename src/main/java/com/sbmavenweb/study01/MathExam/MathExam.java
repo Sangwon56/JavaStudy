@@ -115,4 +115,20 @@ public class MathExam {
         return result;
     }
 
+    public int exam120818(int price) throws Exception {
+        if ( price < 10 || price > 1000000) {
+            throw new Exception("price 는 10과 1000000 사이여야 합니다.");
+        }
+        double sale_price = 0;
+        if( price >= 100000 && price < 300000 ) {
+            sale_price = (price * 0.95);
+        }
+        else if( price >= 300000 && price < 500000 ) {
+            sale_price = (price * 0.9);
+        }
+        else if( price >= 500000 ) {
+            sale_price = (price * 0.8);
+        }
+        return (int)sale_price;
+    }
 }
