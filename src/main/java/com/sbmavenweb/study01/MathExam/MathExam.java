@@ -145,4 +145,30 @@ public class MathExam {
         int total = general + battle + hp;
         return total;
     }
+
+    public String exam120839(String rsp) throws Exception{
+        String result= "";
+        if ( rsp == null) {
+            throw new Exception("rsp 는 null이 아니어야 합니다.");
+        }
+        if ( rsp.length() <= 0 || rsp.length() > 100) {
+            throw new Exception("rsp 문자열의 길이는 1~100글자 이어야 합니다.");
+        }
+        for (int i = 0; i < rsp.length(); i++){
+            char ch = rsp.charAt(i);
+            if ( ch == '2') {
+                result += '0';
+            }
+            else if ( ch == '0') {
+                result += '5';
+            }
+            else if ( ch == '5' ) {
+                result += '2';
+            }
+            else {
+                throw new Exception("rsp 문자는 2, 0 ,5 중 하나 이어야 합니다.");
+            }
+        }
+        return result;
+    }
 }
