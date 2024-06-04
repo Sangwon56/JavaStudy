@@ -131,4 +131,12 @@ public class MathExam {
         }
         return (int)sale_price;
     }
+
+    public int exam120837(int hp) throws Exception {
+        if (hp < 0 || hp > 1000) {
+            throw new Exception("hp 는 0과 1000사이여야 합니다.");
+        }
+        
+        return 0;
+    }
 }

@@ -164,4 +164,6 @@ public class exam01Test {
         System.out.println(exception.toString());
 
     }
+
+    @Test
 }
