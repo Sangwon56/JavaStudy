@@ -120,13 +120,16 @@ public class MathExam {
             throw new Exception("price 는 10과 1000000 사이여야 합니다.");
         }
         double sale_price = 0;
-        if( price >= 100000 && price < 300000 ) {
+        if ( price < 100000 ) {
+            sale_price = price;
+        }
+        else if( price >= 100000 && price < 300000 ) {
             sale_price = (price * 0.95);
         }
-        else if( price >= 300000 && price < 500000 ) {
+        else if( price >=  300000 && price < 500000) {
             sale_price = (price * 0.9);
         }
-        else if( price >= 500000 ) {
+        else if( price >= 500000) {
             sale_price = (price * 0.8);
         }
         return (int)sale_price;
