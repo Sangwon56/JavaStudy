@@ -174,4 +174,28 @@ public class MathExam {
         }
         return result;
     }
+
+    public int[] exam120824(int[] num_list) throws Exception {
+        if( num_list == null) {
+            throw new Exception("num_list 는 null 이 아니어야 합니다.");
+        }
+        if ( num_list.length <= 0 || num_list.length > 100) {
+            throw new Exception("num_list 의 배열의 길이는 0과 100사이여야 합니다.");
+        }
+
+        int odd_count = 0, even_count = 0;
+        for( int i =0; i< num_list.length; i++){
+            if( num_list[i] < 0 || num_list[i] > 1000) {
+                throw new Exception("num_list 의 범위는 0~1000 사이여야 합니다.");
+            }
+            if (num_list[i] % 2 == 0) {
+                even_count++;
+            }
+            else {
+                odd_count++;
+            }
+        }
+        int result[] = new int[] {even_count, odd_count};
+        return result;
+    }
 }
