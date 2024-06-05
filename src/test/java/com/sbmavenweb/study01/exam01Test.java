@@ -3,6 +3,10 @@ package com.sbmavenweb.study01;
 import com.sbmavenweb.study01.MathExam.MathExam;
 import net.bytebuddy.implementation.bytecode.Throw;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -227,5 +231,10 @@ public class exam01Test {
     public void specialCharacters() throws Exception {
         System.out.println("special characters");
         System.out.println("[\\n,\\\",\\\\] is very important.");
+    }
+
+    @Test
+    public void printA() throws Exception {
+
     }
 }
