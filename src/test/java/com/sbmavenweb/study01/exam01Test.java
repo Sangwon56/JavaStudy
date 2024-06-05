@@ -211,4 +211,21 @@ public class exam01Test {
         assertThat(math.exam120899(new int[] {1,8,3})).isEqualTo(new int[] {8,1});
         assertThat(math.exam120899(new int[] {9,10,11,8})).isEqualTo(new int[] {11,2});
     }
+
+    @Test
+    public void numberPrint() throws Exception {
+        int x = 0b1011;
+        int y = 0206;
+        int z = 0x2A0F;
+
+        System.out.println(String.format("10진수 : x = %d, y = %d, z = %d", x, y, z));
+        System.out.println(String.format("8진수 : x = %o, y = %o, z = %o", x, y, z));
+        System.out.println(String.format("16진수 : x = %X, y = %X, z = %X", x, y, z));
+    }
+
+    @Test
+    public void specialCharacters() throws Exception {
+        System.out.println("special characters");
+        System.out.println("[\\n,\\\",\\\\] is very important.");
+    }
 }
