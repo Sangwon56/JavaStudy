@@ -77,6 +77,8 @@ public class BankApplication {
                     b.plusMoney(account, plusMoney);
                     break;
                 case 4:
+                    System.out.println("출금");
+                    System.out.println("--------");
                     str = x.nextLine();
                     System.out.print("계좌번호: ");
                     account = x.nextLine();
