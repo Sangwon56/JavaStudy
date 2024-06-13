@@ -6,7 +6,7 @@ import lombok.Setter;
 import java.util.Scanner;
 @Getter
 @Setter
-public class Student extends Object{
+public class Student {
     private String name;
     private int score;
 
