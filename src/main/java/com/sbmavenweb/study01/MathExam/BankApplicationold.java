@@ -2,13 +2,13 @@ package com.sbmavenweb.study01.MathExam;
 
 import java.util.Scanner;
 
-public class BankApplication {
+public class BankApplicationold {
     String Account[] = new String[100];
     String AccountName[] = new String[100];
     int Money[] = new int[100];
     int i = 0;
 
-    public BankApplication() {
+    public BankApplicationold() {
 
     }
     public void makeAccount( String account, String accountName, int money ) {
@@ -42,7 +42,7 @@ public class BankApplication {
     public static void main(String args[]) {
         Scanner x = new Scanner(System.in);
         boolean a = true;
-        BankApplication b = new BankApplication();
+        BankApplicationold b = new BankApplicationold();
         while (a) {
             System.out.println("---------------------------------------------");
             System.out.println("1.계좌생성 | 2.계좌목록 | 3.예금 | 4.출금 | 5.종료");
